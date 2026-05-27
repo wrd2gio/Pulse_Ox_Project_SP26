@@ -1,0 +1,1 @@
+The purpose of this readme is for an explaination of the code required for the 

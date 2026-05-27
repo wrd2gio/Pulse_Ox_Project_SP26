@@ -15,14 +15,31 @@ import time #this will be used for delays and timing in the messages displayed o
 #such that the width and height of the display are defined and can be used
 
 dTolerance = 10000 #this variable will hold the tolerance value for the IR sensor, it will be used to determine if the finger is detected or not
-<span style="color:blue"> just a test comment </span>
+
+# ---------------------------------- #
+## Finger Detection ##
+# ---------------------------------- #
+
 if ir < dTolerance:
     print(oled.display("finger not detected"))
 else:
     print(oled.display("finger detected"))
-
-if ir == 10000:
+    time.sleep(3)
+    oled.clear()
+if ir >= 10000:
     print(oled.display("Good Reading"))
+    time.sleep(3)
+    oled.clear()
+    print(oled.display("loading."))
+    time.sleep(1)
+    print(oled.display("loading.."))
+    time.sleep(1)
+    print(oled.display("loading..."))
+    oled.clear()
 else:
-    print(oled.display("Bad Reading... place finger closer to sensor"))
+    print(oled.display("Bad Reading. Place finger closer to sensor"))
+
+# ---------------------------------- #
+## Heart Rate Detection graph ##
+# ---------------------------------- #
 
