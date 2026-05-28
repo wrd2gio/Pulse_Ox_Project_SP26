@@ -43,3 +43,4 @@ else:
 ## Heart Rate Detection graph ##
 # ---------------------------------- #
 
+#printing of the live graph of the heart rate detection.
