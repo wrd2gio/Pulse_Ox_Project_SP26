@@ -7,9 +7,8 @@
 #will use the data to determine what to display on the OLED
 from pickletools import dis
 
-import oled #this will work as the library for the OLED display, it will have functions to display text and graphics on the OLED
-import ir #this will work as the library for the IR sensor, it will have functions to read data from the IR sensor
-import time #this will be used for delays and timing in the messages displayed on the OLED
+from machine import Pin, SoftI2C
+import ssd1306
 
 #define the variable for the ir sensor and define the measurements of the oled display 
 #such that the width and height of the display are defined and can be used
@@ -42,5 +41,8 @@ else:
 # ---------------------------------- #
 ## Heart Rate Detection graph ##
 # ---------------------------------- #
+
+# implementation of the live graph and the heart rate detection through
+# the oled display and proper graphs and little heart symbol
 
 #printing of the live graph of the heart rate detection.
